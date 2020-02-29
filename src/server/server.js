@@ -4,6 +4,7 @@ const cors = require("cors");
 const port = 8888;
 const app = express();
 
+app.use(express.static(path.resolve(__dirname, "../public")));
 app.get("/index.html", (req, res) => {
   res.sendFile(path.join(__dirname, "../index.html"));
 });
